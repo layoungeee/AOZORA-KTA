@@ -246,7 +246,7 @@ function renderResult(hotel, room, dateStr, guests, quote){
       <div class="price-block">
         <div class="label">ご宿泊料金（最終）</div>
         <div class="amount">¥${fmt(finalPrice)}</div>
-        <div class="caption">税・宿泊税・入湯税 込み</div>
+        <div class="caption">税・宿泊税・入湯税・コミッション 込み</div>
       </div>
       <div class="note">※ 表示された料金には、人数に応じたFIT/団体の追加料金判定が反映されています。</div>
     </div>`;
