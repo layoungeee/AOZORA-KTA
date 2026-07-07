@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AOZORAホテル料金案内</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">
+    <button class="logo" id="logoBtn" title="初期化してホームに戻る">
+      <span class="mark"><img src="aozora_logo.jpg" alt="AOZORA TOUR CENTER"></span>
+      <span class="word">AOZORA TOUR CENTER</span>
+    </button>
+  </div>
+
+  <div class="stage">
+    <div class="intro">
+      <h1>ホテル料金照会</h1>
+      <p>ホテル・お部屋タイプ・チェックイン日を選ぶと、税・宿泊税・入湯税込みの最終料金がすぐに分かります。</p>
+    </div>
+
+    <div class="grid">
+      <div class="panel">
+        <div class="field">
+          <label for="hotelSel">ホテル</label>
+          <select id="hotelSel"><option value="">-- ホテルを選択 --</option></select>
+        </div>
+        <div class="field">
+          <label for="roomSel">お部屋タイプ</label>
+          <select id="roomSel" disabled><option value="">先にホテルを選んでください</option></select>
+        </div>
+        <div class="field">
+          <label for="guestInput">人数</label>
+          <input type="number" id="guestInput" min="1" max="99" step="1" placeholder="例: 2">
+        </div>
+        <div class="field">
+          <label>チェックイン日</label>
+          <div class="calendar" id="calendar">
+            <div class="cal-head">
+              <button type="button" class="cal-nav" id="prevMonth">&#8249;</button>
+              <span class="cal-title" id="calTitle"></span>
+              <button type="button" class="cal-nav" id="nextMonth">&#8250;</button>
+            </div>
+            <div class="cal-weekdays">
+              <span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span>
+            </div>
+            <div class="cal-grid" id="calGrid"></div>
+          </div>
+        </div>
+        <button class="go" id="goBtn">料金を調べる</button>
+
+        <div class="contact-box">
+          <div class="divider"></div>
+          <div class="cb-title"><span class="dot"></span>掲載のないホテルはこちら</div>
+          <p>リストにないホテルの料金や、その他ご不明な点がございましたら、下記までお問い合わせください。</p>
+          <div class="cb-rows">
+            <div class="cb-row">
+              <span class="cb-label" aria-label="電話" style="color:#f3543f"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>
+              <span class="cb-value">0123-29-3252</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="resultPanel" id="resultPanel">
+        <div class="placeholder" id="placeholder">
+          <p>左の項目を選択すると<br>ここに最終料金が表示されます</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
